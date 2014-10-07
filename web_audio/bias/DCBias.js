@@ -4,9 +4,10 @@
 		
 		var output = context.createGain();
 		var bufferSource = context.createBufferSource();
-		var buffer = context.createBuffer(1, 1, context.sampleRate);
+		var buffer = context.createBuffer(1, 2, context.sampleRate);
 
 		buffer.getChannelData(0)[0] = 1.0;
+		buffer.getChannelData(0)[1] = 1.0;
 		bufferSource.buffer = buffer;
 		bufferSource.loop = true;
 		
